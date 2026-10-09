@@ -64,10 +64,17 @@ const R = express.Router();
 app.use('/api', R);
 
 // ---------- test check ----------
-app.get('/api/test', (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).json({
-    success: true,
-    message: 'Faculty backend is working'
+    message: "Employee Data API is running",
+    status: "OK"
+  });
+});
+
+app.get("/api/test", (req, res) => {
+  res.status(200).json({
+    message: "API route is working",
+    status: "OK"
   });
 });
 
